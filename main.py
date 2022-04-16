@@ -1,8 +1,6 @@
 from email import message
 from fileinput import filename
 from importlib.resources import contents
-from tkinter.filedialog import test
-from turtle import delay, speed
 from typing_extensions import Self
 import requests
 import ctypes
@@ -17,16 +15,7 @@ import subprocess
 
 
 
-def colors_256(color_):
-    num1 = str(color_)
-    num2 = str(color_).ljust(3, ' ')
-    if color_ % 16 == 0:
-        return(f"\033[38;5;{num1}m {num2} \033[0;0m\n")
-    else:
-        return(f"\033[38;5;{num1}m {num2} \033[0;0m")
-
-
-def random_string(letter_count, digit_count):
+def soom(letter_count, digit_count):
     str1 = ''.join((random.choice(string.ascii_letters) for x in range(letter_count)))  
     str1 += ''.join((random.choice(string.digits) for x in range(digit_count)))  
   
@@ -40,7 +29,7 @@ auto_gen  = True;
 def auto_gene():
 
         while auto_gen == True:
-            code = random_string(15,2)
+            code = soom(15,2)
             success = 0
             url = 'https://gift.truemoney.com/campaign/?v=' + code
             get_url = (f"https://voucher.meowcdn.xyz/api/api/v1/topup/{code}/redeem")
