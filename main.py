@@ -1,4 +1,3 @@
-
 from importlib.resources import contents
 from typing_extensions import Self
 import requests
