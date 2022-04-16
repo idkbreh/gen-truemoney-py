@@ -25,7 +25,7 @@ auto_gen  = True;
 def auto_gene():
 
         while auto_gen == True:
-            code = soom(15,2)
+            code = soom(16,2)
             success = 0
             url = 'https://gift.truemoney.com/campaign/?v=' + code
             get_url = (f"https://voucher.meowcdn.xyz/api/api/v1/topup/{code}/redeem")
