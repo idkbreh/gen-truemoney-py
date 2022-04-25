@@ -28,8 +28,8 @@ def auto_gene():
             code = soom(16,2)
             success = 0
             url = 'https://gift.truemoney.com/campaign/?v=' + code
-            get_url = (f"https://voucher.meowcdn.xyz/api/api/v1/topup/{code}/redeem")
-            data = {"mobile":f"{mobile}","voucher":f"{code}"}
+            get_url = (f"https://api.tanny.club/{code}/redeem/{mobile}")
+      #Update Api Meowcdn บิดไปละ
             r = requests.post(get_url, data=json.dumps(data))
             if r.status_code != 200:
                 success =+ float(1)
@@ -37,16 +37,12 @@ def auto_gene():
                 print("[SUCCESS] " + url)
             else:
                 print("[trash] "+url)
-
-                
-                
-                
-             
 os.system('cls')
 
 ctypes.windll.kernel32.SetConsoleTitleA("generate aungpao by SIMP#2712 discord https://discord.gg/XAmMUcCAJe")
 print("generate aungpao by SIMP#2712 dont sell this shit ( your own risk ) ")
 print('\n')
 mobile = input("Enter Your Phone Number : ")
+
 auto_gene()
 
