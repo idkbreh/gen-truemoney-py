@@ -7,3 +7,6 @@ open source generate truemoney link and redeem with api (dont resell  source น
 4. python main.py 
 5. ถ้าอันบนไม่ได้ก็ python3 main.py
 6. ฝากดิสคอร์ดด้วยจุ้บๆ https://discord.gg/XAmMUcCAJe
+
+
+pip install requests
